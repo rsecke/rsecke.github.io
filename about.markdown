@@ -4,6 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Hi! My name is Robinson. I'm a 4th year currently attending Cal Poly Pomona as a CIS major. My cybersecurity journey has just begun, but I am interested in penetration testing and anything DFIR related.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-This blog is going to be about anything related to cyber security and technology that interests me. I want to make this blog a good resource for those interested to learn about security topics in depth. Expect to see detailed walkthroughs of my ventures into this field!
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
+
+
+[jekyll-organization]: https://github.com/jekyll
