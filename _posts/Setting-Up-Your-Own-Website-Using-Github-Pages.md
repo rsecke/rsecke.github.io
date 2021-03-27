@@ -1,3 +1,8 @@
+---
+title: Setting Up Your Own Website Using Github Pages
+permalink: /technology/github-pages
+---
+
 # What is GitHub Pages?
 
 I've been wanting to host my own website for a very long time, but I never got around to doing it until 2 weeks ago after asking a few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) how they managed to host their own website. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I am cheap and I don't want to pay for any of these services. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
