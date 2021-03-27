@@ -28,7 +28,7 @@ Git is a version control system that allows you to track the progress of a proje
 
 You could download Git for Windows, or use a Linux virtual machine (I'll explain later).
 
-**Windows**: https://git-scm.com/downloads
+**Windows**: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 **Linux**: `sudo apt install git`
 
@@ -63,10 +63,10 @@ Here are some extra resources to help you get a better understanding of Git.
 
 ### Websites
 
-- https://try.github.io/
-- https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049
-- https://learngitbranching.js.org/
-- https://www.atlassian.com/git
+- [https://try.github.io/]([https://try.github.io/)
+- [https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049](https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049)
+- [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
+- [https://www.atlassian.com/git](https://www.atlassian.com/git)
 
 ### Videos
 
@@ -76,8 +76,8 @@ Here are some extra resources to help you get a better understanding of Git.
 
 ### Cheat Sheets
 
-- https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
-- https://education.github.com/git-cheat-sheet-education.pdf
+- [https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
 
 # What is Jekyll?
 
@@ -100,7 +100,7 @@ Jekyll is a static website generator that makes it easier to create websites wit
 - Author, date, title
 - You can also create custom frontmatter variables
 
-```json
+```yaml
 ---
 layout: post
 title:  "Welcome to Jekyll!"
@@ -165,7 +165,7 @@ categories: jekyll update
 Begin writing your blog post here...
 ```
 
-```
+```markdown
 ---
 layout: post
 title:  "Welcome to Jekyll!"
@@ -194,10 +194,10 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-			type: "posts"
+      type: "posts"
     values:
       layout: "post"
-			author: Robinson
+      author: Robinson
 ```
 
 `path:` specifies to the directories that default frontmatter will apply to
@@ -275,7 +275,7 @@ I recommend creating a virtual machine to initially create the site. Jekyll is m
 
 After setting up your VM, the first thing to do is install Git and Jekyll. I followed the installation process for Ubuntu from Jekyll's [documentation](https://jekyllrb.com/docs/installation/ubuntu/).
 
-```
+```bash
 sudo apt install git ruby-full build-essential zlib1g-dev
 
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
@@ -286,11 +286,9 @@ source ~/.bashrc
 gem install jekyll bundler
 ```
 
-
-
 Jekyll requires a empty directory, so we can create the website and then move it into our repository.
 
-```
+```bash
 mkdir </new/directory>
 cd </new/directory>
 jekyll new .
@@ -298,3 +296,4 @@ mv * /path/to/repository
 ```
 
 From here, you can create a new markdown file in `_posts` to make your first blog. Congratulations.
+
