@@ -63,7 +63,7 @@ Here are some extra resources to help you get a better understanding of Git.
 
 ### Websites
 
-- [https://try.github.io/]([https://try.github.io/)
+- [https://try.github.io/](https://try.github.io/)
 - [https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049](https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049)
 - [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
 - [https://www.atlassian.com/git](https://www.atlassian.com/git)
