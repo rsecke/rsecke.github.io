@@ -5,9 +5,9 @@ permalink: /technology/github-pages
 
 # What is GitHub Pages?
 
-I have wanted to create my own website for a very long time. A few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) told me they used GitHub Pages, and convinced me to do the same. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I don't want to pay for any of these services and I doubt you do either. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
+I've wanted to create my own website for a very long time. A few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) told me they used GitHub Pages, and convinced me to do the same. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I don't want to pay for any of these services and I doubt you do either. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
 
-GitHub Pages is a alternative to all these paid services, and handles everything for you. It turns a repository into a website. It is completely free, and you don't need any developer experience to get your own website up and running.
+GitHub Pages is a alternative to all these paid services, and handles everything for you. It turns a repository into a website, and is completely free. You don't need any developer experience to get your own website up and running either.
 
 # Prerequisites
 
@@ -18,7 +18,7 @@ There are a few things you have to know/learn before using GitHub Pages.
 - Basic Linux commands
 - Virtual machine
 
-I will not be covering everything in depth, but I will try my best to get you up to speed. I didn't know anything about Git or Jekyll before creating my website, but it is really easy to learn. I actually just dived into making my website without knowing a single thing about Git or Jekyll, and created my website by the end of the day. You can do this.
+I won't be covering everything in depth, but I will try my best to get you up to speed. I didn't know anything about Git or Jekyll before creating my website, but it is really easy to learn. I actually just dived into making my website without knowing a single thing about Git or Jekyll, and created my website by the end of the day. You can do this.
 
 # What is Git?
 
@@ -50,11 +50,11 @@ I only used 3-4 commands when working on my website, but these are basic Git com
 
 - `git status`: checks the changes made to the repository
 
-- `git add <file>`: adds files to the index
+- `git add <file>`:  stages file(s) to be added to a commit
 
-- `git commit -m "<message>"`: snapshots the current changes to your repository
+- `git commit -m "<message>"`: snapshots the current changes of your repository
 
-- `git push`: pushes the changes in the local repository to GitHub
+- `git push`: pushes the changes in a local repository to a central repository
   - `git push -u origin main`: pushes the commit to the main branch of your repository
 
 ## Resources
@@ -84,9 +84,9 @@ Jekyll is a static website generator that makes it easier to create websites wit
 
 `jekyll new .`: makes a new Jekyll site with default content (directory needs to be empty)
 
-`bundle exec jekyll serve`: initial command to host local website on port 4000
+`bundle exec jekyll serve`: initial command to host a local website on `localhost:4000`
 
-- This command will check the current directory and build the website
+- This command will check the current directory and build the website. You can use this command to see how your website will look before pushing any official changes to your repository.
 
 - `jekyll serve`: you can just type this after first time to host the local website on port 4000
 
@@ -94,7 +94,7 @@ Jekyll is a static website generator that makes it easier to create websites wit
 
 **Frontmatter**: gives information about each page in YAML or JSON format
 
-- Author, date, title
+- Author, date, title, layout
 - You can also create custom frontmatter variables
 
 ```yaml
@@ -108,7 +108,7 @@ categories: jekyll update
 
 Frontmatter is also metadata that determines how files will be read/stored on your website.
 
-The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-to-jekyll.html`. Notice that the `categories` section determines the permalink of the blog post. Right after `/jekyll/update`, you also see the date the blog was created. This is the default naming scheme of your posts.
+The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-to-jekyll.html`. Notice that the `categories` section determines the address of the blog post. Right after `/jekyll/update`, you also see the date the blog was created followed by the title of the blog. This is the default naming scheme of your posts.
 
 `categories: jekyll update`
 
@@ -116,13 +116,11 @@ The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-
 
 `YYYY-MM-DD-<title-of-post>`
 
-- This is the default naming scheme when making the markdown files that will be our blogs. There are no spaces in the filename.
+- This is the default naming scheme when making the markdown files that will be our blogs. The `YYYY-MM-DD` and dashes in between words are necessary when creating a file. There should be no spaces in your file name.
 
 ## Blog Post Syntax
 
 Naming convention: `YYYY-MM-DD-<title-of-post>`
-
-- The `YYYY-MM-DD` format is necessary when creating a file. The dashes in between are also necessary. There should be no spaces in your file name.
 
 File type: markdown or HTML files
 
@@ -152,7 +150,7 @@ Permalinks give permanent links to your blog posts. This is the way I organize m
 
 #### Sample Blog Post
 
-These are 2 ways to format your blog. I recommend sticking with the markdown format.
+These are 2 ways to format your the address to your blog. You can use categories and the current date, or give the post a permanent link. I recommend sticking with the markdown format when creating your blog posts.
 
 ```markdown
 ---
@@ -199,15 +197,13 @@ defaults:
       author: Robinson
 ```
 
+`path` specifies to the directories that default frontmatter will apply to
 
+`type` specifies what type of pages (page, post) default frontmatter will apply to
 
-`path:` specifies to the directories that default frontmatter will apply to
+`layout` defines what type of layout will be used
 
-`type:` specifies what type of pages (page, post) default frontmatter will apply to
-
-`layout:` defines what type of layout will be used
-
-- So without `type:`, all files will default to the post layout
+- So without `type`, all files will default to the post layout
 
 ## Directory Structure
 
@@ -261,7 +257,7 @@ I learned everything I needed to know about Jekyll from Mike Dane's [tutorial](h
 # Getting Started
 
 1. Create a GitHub account
-2. Create a new repository as <*username*.github.io>
+2. Create a new repository as `<username>.github.io`
 3. Install Git & Jekyll
 4. Clone the repository to your VM
 5. Start blogging
