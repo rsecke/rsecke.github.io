@@ -5,9 +5,9 @@ permalink: /technology/github-pages
 
 # What is GitHub Pages?
 
-I've been wanting to host my own website for a very long time, but I never got around to doing it until 2 weeks ago after asking a few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) how they managed to host their own website. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I am cheap and I don't want to pay for any of these services. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
+I have wanted to create my own website for a very long time. A few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) told me they used GitHub Pages, and convinced me to do the same. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I don't want to pay for any of these services and I doubt you do either. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
 
-GitHub Pages is a alternative to all these paid services. It turns a repository into a website. It is completely free, and you don't need any developer experience to get your own website up and running.
+GitHub Pages is a alternative to all these paid services, and handles everything for you. It turns a repository into a website. It is completely free, and you don't need any developer experience to get your own website up and running.
 
 # Prerequisites
 
@@ -18,11 +18,11 @@ There are a few things you have to know/learn before using GitHub Pages.
 - Basic Linux commands
 - Virtual machine
 
-I will not be covering all of these topics in depth, but I will try my best to explain these concepts in a way for you to get up to speed on these topics. I did not know anything about Git or Jekyll before creating my website, but it is really easy to learn. I actually just dived into making my website without knowing a single thing about Git or Jekyll, and created my website by the end of the day. You can do this.
+I will not be covering everything in depth, but I will try my best to get you up to speed. I didn't know anything about Git or Jekyll before creating my website, but it is really easy to learn. I actually just dived into making my website without knowing a single thing about Git or Jekyll, and created my website by the end of the day. You can do this.
 
 # What is Git?
 
-Git is a version control system that allows you to track the progress of a project.
+Git is a version control system that allows you to track the changes of a project over time. It acts as a "save" button. Every change made is tracked and managed in a central repository. When you commit a change, Git gives that snapshot an ID and it becomes an official checkpoint of your project.
 
 ## Downloading Git
 
@@ -36,7 +36,7 @@ You could download Git for Windows, or use a Linux virtual machine (I'll explain
 
 ### Basic Commands
 
-I really only used 3-4 commands when working on my website, but these are basic Git commands to get you started with creating your website.
+I only used 3-4 commands when working on my website, but these are basic Git commands to get you started with creating your website.
 
 - `git init`: initializes a repository
 
@@ -63,16 +63,13 @@ Here are some extra resources to help you get a better understanding of Git.
 
 ### Websites
 
-- [https://try.github.io/](https://try.github.io/)
 - [https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049](https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049)
-- [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
-- [https://www.atlassian.com/git](https://www.atlassian.com/git)
+- [https://www.atlassian.com/git/tutorials/what-is-version-control](https://www.atlassian.com/git/tutorials/what-is-version-control)
 
 ### Videos
 
 - [Learn Git in 15 Minutes](https://youtu.be/USjZcfj8yxE)
 - [Git & GitHub Crash Course For Beginners](https://youtu.be/SWYqp7iY_Tc)
-- [Git and GitHub for Beginners](https://youtu.be/RGOj5yH7evk)
 
 ### Cheat Sheets
 
@@ -125,6 +122,8 @@ The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-
 
 Naming convention: `YYYY-MM-DD-<title-of-post>`
 
+- The `YYYY-MM-DD` format is necessary when creating a file. The dashes in between are also necessary. There should be no spaces in your file name.
+
 File type: markdown or HTML files
 
 ### Frontmatter
@@ -144,7 +143,7 @@ You don't have to follow the default naming scheme. I suggest you to come up wit
 
 ### Permalinks
 
-Permalinks give permanent links to your blog posts. This is the way I organize my blogs since I don't like the unnecessary directories and dates on my link. I came up with several overarching "directories" that categorize my posts.
+Permalinks give permanent links to your blog posts. This is the way I organize my blogs since I don't like unnecessary directories and dates on my link. I came up with several overarching "directories" that categorize my posts.
 
 - `/technology` is the permalink for my posts relating to technology
 - `/htb` is the permalink for my posts relating to Hack the Box
@@ -199,6 +198,8 @@ defaults:
       layout: "post"
       author: Robinson
 ```
+
+
 
 `path:` specifies to the directories that default frontmatter will apply to
 
@@ -255,7 +256,7 @@ There are a lot of Jekyll themes online that you can use to make your website ni
 
 ## Resources
 
-I learned everything I needed to know about Jekyll from Mike Dane's [Jekyll tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB) on YouTube. I also used Jekyll's [documentation](https://jekyllrb.com/docs/).
+I learned everything I needed to know about Jekyll from Mike Dane's [tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB) on YouTube. I also used Jekyll's [documentation](https://jekyllrb.com/docs/).
 
 # Getting Started
 
@@ -295,5 +296,4 @@ jekyll new .
 mv * /path/to/repository
 ```
 
-From here, you can create a new markdown file in `_posts` to make your first blog. Congratulations.
-
+From here, you can create a new markdown file in `_posts` to make your first blog. Congratulations!
