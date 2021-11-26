@@ -22,7 +22,7 @@ title: rsecke
 email: robinsontran.sec@gmail.com
 description: A cybersecurity & technology blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rsecke.com" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: robinsontran
 github_username: rsecke
 
