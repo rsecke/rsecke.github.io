@@ -1,6 +1,6 @@
 ---
-layout: 
 title: Categories
+layout: page
 ---
 
 # Technology
