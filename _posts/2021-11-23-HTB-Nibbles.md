@@ -1,4 +1,10 @@
-# nmap
+---
+title: HTB Nibbles
+permalink: /htb/nibbles
+tags: ["htb"]
+---
+
+## nmap
 
 ```
 # Nmap 7.92 scan initiated Fri Nov 19 11:15:37 2021 as: nmap -p- -sCV -oN nibbles.nmap 10.10.10.75
@@ -20,11 +26,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Fri Nov 19 11:16:14 2021 -- 1 IP address (1 host up) scanned in 36.98 seconds
 ```
 
-# gobuster
+## gobuster
 
 There was nothing on the homepage, but I always quickly check the page source for any comments or interesting notes
 
-## Checking Page Source
+### Checking Page Source
 
 ```html
 <b>Hello world!</b>
@@ -36,7 +42,7 @@ There was nothing on the homepage, but I always quickly check the page source fo
 
 We see that there is a directory called `/nibbleblog` commented out.
 
-# /nibbleblog
+## /nibbleblog
 
 `/nibbleblog` looks like a WordPress website, so let's run WPScan. I also ran another `gobuster` scan in the background to save time.
 
@@ -129,7 +135,7 @@ Since my IP was blocked after 5 tries, I figured it was not supposed to be brute
 
 ![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/htb/nibbles/nibbleblog%20dashboard.png)
 
-# Exploiting the Image Plugin
+## Exploiting the Image Plugin
 
 Once inside the nibbleblog dashboard, I navigated to the plugin page by clicking the `Plugin` button near the top left.
 
