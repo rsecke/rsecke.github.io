@@ -1,8 +1,8 @@
 ---
 layout: project
 title: spiderCTF
-description: A WHOLE LOTTA WEB
-summary: spiderCTF is a web
+description: WHOLE LOTTA WEB
+summary: spiderCTF teaches the basics of web vulnereabilities in a jeopardy-style CTF.
 category: Front-end development
 ---
 
