@@ -1,27 +1,33 @@
-site: rsecke
-url: https://rsecke.com
-author: Robinson
+site: Colorie
+url: 
+author: Colorie
 author:
-  name: Robinson
+  name: Colorie
   email: 
   url: 
   avatar: 
-title: rsecke
-description: Center of Cybersecurity Knowledge
+title: Colorie
+description: Colorie - Single column blog and portfolio Jekyll theme 
 logo: 
 image: 
-twitter: 
+twitter: ronaldsvilcins  
 twitter:
-  username: 
-  creator: 
-  card: 
+  username: ronaldsvilcins
+  creator: ronaldsvilcins
+  card: summary
 social:
-  name: 
+  name: Ronalds Vilcins
   links:
-    - https://github.com/rsecke
-    - https://linkedin.com/in/robinsontran
+    - https://twitter.com/#
+    - https://www.dribbble.com/#
+    - https://github.com/#
+    - https://codepen.io/#
   
 permalink: pretty
+
+disqus:
+  name: "your disqus username" # required
+  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
 
 baseurl:             ""
 

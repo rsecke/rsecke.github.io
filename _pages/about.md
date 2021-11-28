@@ -3,17 +3,20 @@ layout: page
 title: About
 ---
 
-## rsecke (ar·sec), the Center of Cybersecurity Knowledge
+## Colorie - Single column blog and portfolio Jekyll theme 
 
-The Center of Cybersecurity Knowledge is an educational institution that aims to teach security topics in an engaging manner. This blog strives to be a secondary platform that provides a springboard to quickly learn about security tools, tactics, and technologies with technical depth in mind.
+Colorful, minimal one-column portfolio/blog theme built for Jekyll. Perfect for your personal website, blog and portfolio.
 
-## Achievments
-- [CPTC](https://cp.tc/) 2021-2022 Western Region Champion
-- 2021 Director of SWIFT Labs
-- Soon to be 1 x [Tech Symposium](https://techsymposium.calpolyswift.org/) speaker (WIP)
+### Key features
 
-## About Me
-- D1 hooper turned pentester
-- PowerShell is my favorite programming language
-- Part-time cybersecurity infrastructure god
-- Big fan of Docker, Kubernetes, Python, and Ansible (still learning)
+- seo optimized
+- portfolio/blog/tag pages
+- AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest
+- responsive
+- inline css
+- compressed css, html
+- sitemap
+- robots.txt
+- atom feed
+- json feed
+- http security headers
