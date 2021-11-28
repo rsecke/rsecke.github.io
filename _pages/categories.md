@@ -1,5 +1,5 @@
 ---
-layout: tags
+layout: 
 title: Categories
 ---
 
