@@ -1,5 +1,9 @@
-_site
+tmp
+*.rdb
+.env
 .sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+coverage
+_drafts
+_site
+.DS_Store
+.git
