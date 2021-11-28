@@ -1,8 +1,8 @@
 site: rsecke
-url: 
-author: Colorie
+url: https://rsecke.com
+author: Robinson
 author:
-  name: Colorie
+  name: Robinson
   email: 
   url: 
   avatar: 
@@ -19,12 +19,9 @@ social:
   name: 
   links:
     - https://github.com/rsecke
+    - https://linkedin.com/in/robinsontran
   
 permalink: pretty
-
-disqus:
-  name: "your disqus username" # required
-  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
 
 baseurl:             ""
 
