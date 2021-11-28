@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Project One
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-summary: Lorem ipsum dolor sit amet, consectetur.
+title: spiderCTF
+description: A WHOLE LOTTA WEB
+summary: spiderCTF is a web
 category: Front-end development
 ---
 
