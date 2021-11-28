@@ -1,4 +1,4 @@
-site: Colorie
+site: rsecke
 url: 
 author: Colorie
 author:
@@ -6,22 +6,19 @@ author:
   email: 
   url: 
   avatar: 
-title: Colorie
-description: Colorie - Single column blog and portfolio Jekyll theme 
+title: rsecke
+description: Center of Cybersecurity Knowledge
 logo: 
 image: 
-twitter: ronaldsvilcins  
+twitter: 
 twitter:
-  username: ronaldsvilcins
-  creator: ronaldsvilcins
-  card: summary
+  username: 
+  creator: 
+  card: 
 social:
-  name: Ronalds Vilcins
+  name: 
   links:
-    - https://twitter.com/#
-    - https://www.dribbble.com/#
-    - https://github.com/#
-    - https://codepen.io/#
+    - https://github.com/rsecke
   
 permalink: pretty
 
