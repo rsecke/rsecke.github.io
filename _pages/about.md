@@ -5,7 +5,7 @@ title: About
 
 ## rsecke (ar·sec), the Center of Cybersecurity Knowledge
 
-The Center of Cybersecurity Knowledge is an educational insititution that aims to teach security topics in an engaging manner. This blog strives to be a secondary platform that provides those interested in this field the springboard to quickly learn about security tools, tactics, and technologies with technical depth in mind.
+The Center of Cybersecurity Knowledge is an educational institution that aims to teach security topics in an engaging manner. This blog strives to be a secondary platform that provides those interested in this field the springboard to quickly learn about security tools, tactics, and technologies with technical depth in mind.
 
 ## Achievments
 - CPTC 2021-2022 Western Region Champion
