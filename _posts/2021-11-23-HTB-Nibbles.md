@@ -134,7 +134,7 @@ Nibbleblog security error - Blacklist protection
 
 Since my IP was blocked after 5 tries, I figured it was not supposed to be brute forced. I spent a long time trying to figure out what the password was supposed to be, and went through the entire blog directory to see if there were any files that hinted at the password. I eventually found out the password was `nibbles` after watching Ippsec's video because I was stuck on this part. I did not think to try `admin:nibbles` on the login page. Not the biggest fan of this part of Nibbles. It felt impossible for me to figure out without watching a video and looking at a few blogs to see what was the intended way to figure out the password.
 
-![test](rsecke.com/assets/images/htb/nibbles/nibbleblog%20dashboard.png)
+![](rsecke.com/assets/images/htb/nibbles/nibbleblog dashboard.png)
 
 ## Exploiting the Image Plugin
 
