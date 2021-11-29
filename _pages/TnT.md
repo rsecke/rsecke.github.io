@@ -1,6 +1,6 @@
 ---
 layout: single
-Title: "T&T"
+title: "T&T"
 permalink: /T&T
 ---
 

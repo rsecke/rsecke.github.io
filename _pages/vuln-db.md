@@ -1,6 +1,6 @@
 ---
 layout: single
-Title: "Vulnerability Database (vuln-db)"
+title: "Vulnerability Database (vuln-db)"
 permalink: /vuln-db
 ---
 
