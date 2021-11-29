@@ -106,7 +106,7 @@ PORT   STATE SERVICE
 
 ### gobuster
 
-`gobuster` is a directory brute forcer. This tool is used to find valid directories, subdomains, and virtual hosts on web servers that run more than on website. 
+`gobuster` is a directory brute forcer. This tool is used to find valid directories, subdomains, and virtual hosts on web servers that run more than one website. 
 
 #### Common Flags
 
