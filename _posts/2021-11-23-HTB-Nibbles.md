@@ -1,6 +1,7 @@
 ---
 layout: single
 title: HTB Nibbles
+toc: true
 permalink: /htb/nibbles
 tags: ["htb"]
 ---
