@@ -144,7 +144,7 @@ Once inside the nibbleblog dashboard, I navigated to the plugin page by clicking
 
 Navigate to the `My image` plugin and click `Configure` on the bottom of the plugin.
 
-![]({{ site.url }}assets/images/htb/nibbles/nibbleblog%20image%20plugin.png)
+![]({{ site.url }}/assets/images/htb/nibbles/nibbleblog%20image%20plugin.png)
 
 The exploit was very easy to exploit. Create a PHP reverse shell payload and upload it to this plugin. I used `msfvenom` to create the payload.
 
