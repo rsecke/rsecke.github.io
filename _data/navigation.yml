@@ -1,13 +1,13 @@
 main:
-  - title: "Projects"
+  - title: "projects"
     url: /projects
   - title: "T&T"
     url: /T&T
   - title: "vuln-db"
     url: /vuln-db
-  - title: "Wiki"
+  - title: "wiki"
     url: /wiki
-  - title: "About"
+  - title: "about"
     url: /about
   # - title: "Sample Posts"
   #   url: /year-archive/
