@@ -1,8 +1,8 @@
 main:
   - title: "Projects"
     url: /projects
-  - title: "TnT"
-    url: /TnT
+  - title: "T&T"
+    url: /T&T
   - title: "vuln-db"
     url: /vuln-db
   - title: "Wiki"
