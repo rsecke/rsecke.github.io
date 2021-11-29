@@ -1,6 +1,6 @@
 ---
 layout: single
-Title: TNT
+Title: "TnT"
 permalink: /TnT
 ---
 
