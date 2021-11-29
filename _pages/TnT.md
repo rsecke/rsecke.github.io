@@ -7,7 +7,7 @@ classes: wide
 permalink: /T&T
 ---
 
-T&T is a central knowledge base for any tool or technique that I have used so far. This is also a reference point for any tools or technique that I use in blog posts.
+T&T is a central knowledge base for any tool or technique that I have used so far. This is also the reference point for any tools or techniques that I use in blog posts.
 
 ## Tools
 
