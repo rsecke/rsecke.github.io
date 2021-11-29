@@ -60,3 +60,12 @@ wiki-navigation:
     children:
       - title: "msfvenom"
         url: /wiki#msfvenom
+
+T&T-navigation:
+  - title: "TOOLS"
+    children:
+      - title: "nmap"
+        url: T&T#nmap
+      - title: "gobuster"
+        url: wiki#gobuster
+  - title: "TECHNIQUES"
