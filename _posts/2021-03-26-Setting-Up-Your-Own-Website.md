@@ -1,7 +1,9 @@
 ---
+layout: single
 title: Setting Up Your Own Website Using Github Pages
 permalink: /technology/github-pages
 tags: ["technology", "github pages", "github"]
+
 ---
 
 ## What is GitHub Pages?

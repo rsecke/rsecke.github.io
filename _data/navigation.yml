@@ -1,0 +1,67 @@
+main:
+  - title: "Projects"
+    url: /projects
+  - title: "TnT"
+    url: /TnT
+  - title: "vuln-db"
+    url: /vuln-db
+  - title: "Wiki"
+    url: /wiki
+  - title: "About"
+    url: /about
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+wiki-navigation:
+  - title: "TMUX"
+    children:
+      - title: "tmux commands"
+        url: wiki/#tmux-commands
+      - title: "tmux essentials"
+        url: wiki/#tmux-essentials
+      - title: "tmux-logging"
+        url: wiki/#tmux-logging
+  - title: "NMAP"
+    children:
+      - title: "find nmap scripts"
+        url: /wiki/#find-nmap-scripts
+      - title: "network sweep"
+        url: /wiki/#network-sweep
+  - title: "FILE TRANSFER"
+    children:
+      - title: "smb"
+        url: /wiki/#smb
+      - title: "nc"
+        url: /wiki/#nc
+      - title: "python"
+        url: /wiki/#python
+  - title: "FULL FUNCTIONING SHELL"
+    children:
+      - title: "spawn tty shell"
+        url: /wiki/#spawn-tty-shell
+  - title: "PORT FORWARDING"
+    children:
+      - title: "ssh port forwarding"
+        url: /wiki/#ssh-port-forwarding
+  - title: "INSTALLATIONS"
+    children:
+      - title: "C2"
+        url: /wiki/#c2
+      - title: "jVis"
+        url: /wiki/#jvis
+      - title: "Docker"
+        url: /wiki/#Docker
+  - title: "AUTORECON"
+  - title: "METASPLOIT"
+    children:
+      - title: "msfvenom"
+        url: /wiki/#msfvenom
+
+test-nav:
+  - title: "PAGE A"
+    children: 
+      - title: "CHILD PAGE A"
