@@ -67,5 +67,5 @@ T&T-navigation:
       - title: "nmap"
         url: T&T#nmap
       - title: "gobuster"
-        url: wiki#gobuster
+        url: T&T#gobuster
   - title: "TECHNIQUES"
