@@ -4,6 +4,7 @@ title: "Wiki"
 sidebar:
     nav: wiki-navigation
 classes: wide
+permalink: /wiki
 ---
 
 ## tmux

@@ -1,6 +1,7 @@
 ---
 layout: single
 Title: "vuln-db"
+permalink: /vuln-db
 ---
 
 ## vuln-db

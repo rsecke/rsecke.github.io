@@ -1,9 +1,14 @@
 main:
   - title: "Projects"
+    url: /projects
   - title: "TnT"
+    url: /TnT
   - title: "vuln-db"
+    url: /vuln-db
   - title: "Wiki"
+    url: /wiki
   - title: "About"
+    url: /about
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
@@ -55,8 +60,3 @@ wiki-navigation:
     children:
       - title: "msfvenom"
         url: /wiki/#msfvenom
-
-test-nav:
-  - title: "PAGE A"
-    children: 
-      - title: "CHILD PAGE A"

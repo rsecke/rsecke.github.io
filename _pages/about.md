@@ -2,6 +2,7 @@
 layout: single
 classes: wide
 title: About
+permalink: /about
 ---
 
 ## rsecke (ar·sec), the Center of Cybersecurity Knowledge
