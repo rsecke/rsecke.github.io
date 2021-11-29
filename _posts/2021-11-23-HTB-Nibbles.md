@@ -134,17 +134,17 @@ Nibbleblog security error - Blacklist protection
 
 Since my IP was blocked after 5 tries, I figured it was not supposed to be brute forced. I spent a long time trying to figure out what the password was supposed to be, and went through the entire blog directory to see if there were any files that hinted at the password. I eventually found out the password was `nibbles` after watching Ippsec's video because I was stuck on this part. I did not think to try `admin:nibbles` on the login page. Not the biggest fan of this part of Nibbles. It felt impossible for me to figure out without watching a video and looking at a few blogs to see what was the intended way to figure out the password.
 
-![]({{ site.url }}{{ site.baseurl }}/assets/images/htb/nibbles/nibbleblog%20dashboard.png){: .full}
+![]({{ site.url }}/assets/images/htb/nibbles/nibbleblog%20dashboard.png){: .full}
 
 ## Exploiting the Image Plugin
 
 Once inside the nibbleblog dashboard, I navigated to the plugin page by clicking the `Plugin` button near the top left.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/htb/nibbles/nibbleblog%20plugin%20page.png)
+![]({{ site.url }}/assets/htb/nibbles/nibbleblog%20plugin%20page.png){: .full}
 
 Navigate to the `My image` plugin and click `Configure` on the bottom of the plugin.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/htb/nibbles/nibbleblog%20image%20plugin.png)
+![]({{ site.url }}assets/htb/nibbles/nibbleblog%20image%20plugin.png)
 
 The exploit was very easy to exploit. Create a PHP reverse shell payload and upload it to this plugin. I used `msfvenom` to create the payload.
 
@@ -157,11 +157,11 @@ No encoder specified, outputting raw payload
 Payload size: 3052 bytes
 ```
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/htb/nibbles/uploading%20php%20shell.png)
+![]({{ site.url }}/assets/htb/nibbles/uploading%20php%20shell.png)
 
 Click `Save Changes` at the bottom to upload the payload. There will be errors at the top right corner when it is uploaded successfully. Do not worry about it. Set up a netcat listener on Kali.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/htb/nibbles/error%20during%20upload.png)
+![]({{ site.url }}/assets/htb/nibbles/error%20during%20upload.png)
 
 Navigate to `http://10.10.10.75/nibbleblog/admin.php?controller=plugins&action=install&plugin=my_image` to get the payload to create a reverse shell. I kept getting disconnected from my reverse shell, so I created *another* payload within my reverse shell.
 
