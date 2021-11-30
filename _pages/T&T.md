@@ -9,13 +9,13 @@ permalink: /T&T
 
 T&T is a central knowledge base for any tool or technique that I have used so far. This is also the reference point for any tools or techniques that I use in blog posts.
 
-## Tools
+# Tools
 
-### nmap
+## nmap
 
 `nmap` is a network discovery tool that is used to scan and find assets on a network. This tool provides visibility on what devices are on a network, and what ports are running on those devices. `nmap` is able to get detailed results on what service is running on a specific port, and provides scripts for many other detection use cases. Other features include version detection, operating system detection, network information (DNS name, device type, MAC address), and vulnerability detection.
 
-#### Common Flags
+### Common Flags
 
 ```
 -sC: runs default (safe) scripts on a port
@@ -25,9 +25,9 @@ T&T is a central knowledge base for any tool or technique that I have used so fa
 -sn: ping sweep
 ```
 
-#### Sample Output
+### Sample Output
 
-##### nmap scan
+#### nmap scan
 
 ```lua
 # Nmap 7.92 scan initiated Tue Nov 23 15:49:13 2021 as: nmap -Pn -sCV -p- -oN buff 10.10.10.198
@@ -46,7 +46,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Tue Nov 23 15:53:35 2021 -- 1 IP address (1 host up) scanned in 261.93 seconds
 ```
 
-##### ping sweep
+#### ping sweep
 
 `nmap` can be used to quickly discover assets on a network. This scan is a pinging (sending packets) the `172.16.103.0/24` subnet to see all the live hosts on this network.
 
@@ -76,7 +76,7 @@ Host is up (0.010s latency).
 Nmap done: 256 IP addresses (1 host up) scanned in 4.44 seconds
 ```
 
-##### script scan
+#### script scan
 
 A script scan will scan a target for a specific purpose. All the scripts can be found in `/usr/share/nmap/scripts/` on Kali, and the Nmap Scripting Engine (NSE) [documentation](https://nmap.org/nsedoc/) can be used to provide more information on a script's use case.
 
@@ -104,11 +104,11 @@ PORT   STATE SERVICE
 |_      https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
 ```
 
-### gobuster
+## gobuster
 
 `gobuster` is a directory brute forcer. This tool is used to find valid directories, subdomains, and virtual hosts on web servers that run more than one website. 
 
-#### Common Flags
+### Common Flags
 
 You supply `gobuster` with the module to use (`dns`, `dir`, `vhost`), a URL, and a wordlist.
 
@@ -138,9 +138,9 @@ VHOST
 -w: specify wordlist
 ```
 
-#### Sample Output
+### Sample Output
 
-##### `dir` scan
+#### `dir` scan
 
 ```
 [tyco㉿4YE: ~]$ gobuster dir -u https://buffered.io -w ~/wordlists/shortlist.txt
@@ -168,7 +168,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 ===============================================================
 ```
 
-##### `dns` scan
+#### `dns` scan
 
 ```
 [tyco㉿4YE: ~]$ gobuster dns -d google.com -w ~/wordlists/subdomains.txt
@@ -207,7 +207,7 @@ Found: blog.google.com
 ===============================================================
 ```
 
-##### `vhost` scan
+#### `vhost` scan
 
 ```
 [tyco㉿4YE: ~]$ gobuster vhost -u https://mysite.com -w common-vhosts.txt
@@ -232,5 +232,5 @@ Found: mail.mysite.com
 ===============================================================
 ```
 
-## Techniques
+# Techniques
 
