@@ -32,7 +32,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 There was nothing on the homepage, but I always quickly check the page source for any comments or interesting notes
 
-## Checking Page Source
+## checking the page source
 
 ```html
 <b>Hello world!</b>
@@ -137,7 +137,7 @@ Since my IP was blocked after 5 tries, I figured it was not supposed to be brute
 
 ![]({{ site.url }}/assets/images/htb/nibbles/nibbleblog%20dashboard.png){: .full}
 
-# Exploiting the Image Plugin
+# exploiting the image plugin
 
 Once inside the nibbleblog dashboard, I navigated to the plugin page by clicking the `Plugin` button near the top left.
 

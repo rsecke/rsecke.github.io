@@ -65,7 +65,7 @@ git push: pushes the changes in a local repository to a central repository
   > git push -u origin main: pushes the commit to the main branch of your repository
 ```
 
-## Resources
+# Resources
 
 Here are some extra resources to help you get a better understanding of Git.
 
