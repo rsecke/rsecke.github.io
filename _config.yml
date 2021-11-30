@@ -116,7 +116,7 @@ author:
       url: "https://github.com/rsecke/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "rsecke.com"
+      url: "https://rsecke.com"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
