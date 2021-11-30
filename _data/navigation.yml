@@ -9,12 +9,6 @@ main:
     url: /wiki
   - title: "about"
     url: /about
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
 
 wiki-navigation:
   - title: "TMUX"
