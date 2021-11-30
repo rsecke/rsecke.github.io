@@ -31,9 +31,10 @@ Git is a version control system that allows you to track the changes of a projec
 
 You could download Git for Windows, or use a Linux virtual machine (I'll explain later).
 
-**Windows**: [https://git-scm.com/downloads](https://git-scm.com/downloads)
-
-**Linux**: `sudo apt install git`
+```
+Windows: https://git-scm.com/downloads
+Linux: sudo apt install git
+```
 
 ## Basic Git Commands
 
@@ -41,30 +42,34 @@ You could download Git for Windows, or use a Linux virtual machine (I'll explain
 
 I only used 3-4 commands when working on my website, but these are basic Git commands to get you started with creating your website.
 
-- `git init`: initializes a repository
+```
+git init: initializes a repository
 
-- `git clone <link/to/GitHub/repo>`: clones a repository to your local machine
-  - `git clone <https://github.com/<username>/<username.github.io>` will clone your website's repository to a local machine
+git clone <link/to/GitHub/repo>: clones a repository to your local machine
+  > git clone <https://github.com/<username>/<username.github.io> will clone your GitHub Pages repository to a local machine
 
-- `git branch <branch-name>`: creates a new branch
-  - `git checkout <branch-name>`: switch to another branch
+git branch <branch name>: creates a new branch
+  > git checkout <branch name>: switch to another branch
+```
 
 ### Pushing Commits
 
-- `git status`: checks the changes made to the repository
+```
+git status: checks the changes made to the repository
 
-- `git add <file>`:  stages file(s) to be added to a commit
+git add <file>:  stages file(s) to be added to a commit
 
-- `git commit -m "<message>"`: snapshots the current changes of your repository
+git commit -m "<message>": snapshots the current changes of your repository
 
-- `git push`: pushes the changes in a local repository to a central repository
-  - `git push -u origin main`: pushes the commit to the main branch of your repository
+git push: pushes the changes in a local repository to a central repository
+  > git push -u origin main: pushes the commit to the main branch of your repository
+```
 
 ## Resources
 
 Here are some extra resources to help you get a better understanding of Git.
 
-### Websites
+## Websites
 
 - [https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049](https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049)
 - [https://www.atlassian.com/git/tutorials/what-is-version-control](https://www.atlassian.com/git/tutorials/what-is-version-control)
@@ -74,7 +79,7 @@ Here are some extra resources to help you get a better understanding of Git.
 - [Learn Git in 15 Minutes](https://youtu.be/USjZcfj8yxE)
 - [Git & GitHub Crash Course For Beginners](https://youtu.be/SWYqp7iY_Tc)
 
-### Cheat Sheets
+## Cheat Sheets
 
 - [https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
@@ -85,13 +90,14 @@ Jekyll is a static website generator that makes it easier to create websites wit
 
 ## Jekyll Commands
 
-`jekyll new .`: makes a new Jekyll site with default content (directory needs to be empty)
+```
+jekyll new .: makes a new Jekyll site with default content (directory needs to be empty)
+bundle exec jekyll serve: initial command to host a local website on `localhost:4000`
+```
 
-`bundle exec jekyll serve`: initial command to host a local website on `localhost:4000`
+`bundle exec jekyll serve` will check the current directory, resolve dependencies, and build the website. You can use this command to see how your website will look before pushing any official changes to your repository. After the first time, you can just run `jekyll serve` to host the website locally.
 
-- This command will check the current directory and build the website. You can use this command to see how your website will look before pushing any official changes to your repository.
-
-- `jekyll serve`: you can just type this after first time to host the local website on port 4000
+- The `--incremental` flag can help save you time here and there by updating the website as you make changes. Any changes to `_config.yml`, will need to be manually restarted though.
 
 ## Frontmatter
 
@@ -111,15 +117,21 @@ categories: jekyll update
 
 Frontmatter is also metadata that determines how files will be read/stored on your website.
 
-The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-to-jekyll.html`. Notice that the `categories` section determines the address of the blog post. Right after `/jekyll/update`, you also see the date the blog was created followed by the title of the blog. This is the default naming scheme of your posts.
+The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-to-jekyll.html`. 
 
-`categories: jekyll update`
+Notice that the `categories` section determines the address of the blog post. Right after `/jekyll/update`, you also see the date the blog was created followed by the title of the blog. This is the default naming scheme of your posts.
 
-- This will create the directories within the `_site` directory that the blog will be stored in.
+```yaml
+categories: jekyll update
+```
 
-`YYYY-MM-DD-<title-of-post>`
+This will create the directories within the `_site` directory that the blog will be stored in.
 
-- This is the default naming scheme when making the markdown files that will be our blogs. The `YYYY-MM-DD` and dashes in between words are necessary when creating a file. There should be no spaces in your file name.
+```
+YYYY-MM-DD-<title-of-post>
+```
+
+This is the default naming scheme when making the markdown files that will be our blogs. The `YYYY-MM-DD` and dashes in between words are necessary when creating a file. There should be no spaces in your file name.
 
 ## Blog Post Syntax
 
@@ -185,9 +197,7 @@ So far, we've been working with posts. The `layout` category determines what typ
 
 ## Frontmatter Defaults
 
-You can set frontmatter defaults in the `config.yml` file so it appears automagically when you create a post. `_config.yml` is the file to define the default frontmatter
-
-- Make sure to restart the server after any changes to reflect any changes on your website
+You can set frontmatter defaults in the `config.yml` file so it appears automagically when you create a post. `_config.yml` is the file to define the default frontmatter.
 
 ```yaml
 defaults:
@@ -200,15 +210,22 @@ defaults:
       author: Robinson
 ```
 
-`path` specifies to the directories that default frontmatter will apply to
-
-`type` specifies what type of pages (page, post) default frontmatter will apply to
-
-`layout` defines what type of layout will be used
-
-- So without `type`, all files will default to the post layout
+- `path` specifies to the directories that default frontmatter will apply to
+- `type` specifies what type of pages (page, post) default frontmatter will apply to
+- `layout` defines what type of layout will be used
+- `type` specifies what type of pages (page, post) default frontmatter will apply to
+- `layout` defines what type of layout will be used.
 
 ## Directory Structure
+
+- **_drafts**: You can create this directory to store your unfinished blog posts. It will not show on your website.
+- **_posts**: Directory that stores all your published posts
+- **_site**: Holds finished product of the website (Don't need to change anything in this directory).
+- **404.html**: the error file that will show when something isn't reachable on your website
+- **_config.yml**: Settings for your Jekyll website
+- **Gemfile**: Stores website dependencies
+- **about.md**: The about page of our website
+- **index.md**: The home page of our website
 
 ```
 <username>.github.io/
@@ -226,22 +243,6 @@ defaults:
 ├─ index.md
 ├─ README.md
 ```
-
-**_drafts**: You can create this directory to store your unfinished blog posts. It will not show on your website.
-
-**_posts**: Directory that stores all your published posts
-
-**_site**: Holds finished product of the website (Don't need to change anything in this directory).
-
-**404.html**: the error file that will show when something isn't reachable on your website
-
-**_config.yml**: Settings for your Jekyll website
-
-**Gemfile**: Stores website dependencies
-
-**about.md**: The about page of our website
-
-**index.md**: The home page of our website
 
 ### Themes
 
