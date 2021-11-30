@@ -112,7 +112,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/robinsontran/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-square"
       url: "https://github.com/rsecke/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -132,7 +132,7 @@ footer:
       url: https://linkedin.com/in/robinsontran
 
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-square"
       url: https://github.com/rsecke
 
 # Reading Files
