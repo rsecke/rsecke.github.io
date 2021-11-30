@@ -6,13 +6,13 @@ permalink: /technology/github-pages
 tags: ["technology", "github pages", "github"]
 ---
 
-## What is GitHub Pages?
+# What is GitHub Pages?
 
 I've wanted to create my own website for a very long time. A few friends who already had cybersecurity blogs ([NoSecurity](https://nosecurity.blog) & [blauersec](https://blauersec.com/)) told me they used GitHub Pages, and convinced me to do the same. Today, I want to show you how easy it is to create your own website using GitHub Pages. There are many websites hosting services that allow you to create your own website easily, but you have to pay for them. There are affordable options available, but I don't want to pay for any of these services and I doubt you do either. After going through it myself, I am going to teach you how to host your own website using GitHub Pages.
 
 GitHub Pages is a alternative to all these paid services, and handles everything for you. It turns a repository into a website, and is completely free. You don't need any developer experience to get your own website up and running either.
 
-## Prerequisites
+# Prerequisites
 
 There are a few things you have to know/learn before using GitHub Pages.
 
@@ -23,11 +23,11 @@ There are a few things you have to know/learn before using GitHub Pages.
 
 I won't be covering everything in depth, but I will try my best to get you up to speed. I didn't know anything about Git or Jekyll before creating my website, but it is really easy to learn. I actually just dived into making my website without knowing a single thing about Git or Jekyll, and created my website by the end of the day. You can do this.
 
-## What is Git?
+# What is Git?
 
 Git is a version control system that allows you to track the changes of a project over time. It acts as a "save" button. Every change made is tracked and managed in a central repository. When you commit a change, Git gives that snapshot an ID and it becomes an official checkpoint of your project.
 
-### Downloading Git
+## Downloading Git
 
 You could download Git for Windows, or use a Linux virtual machine (I'll explain later).
 
@@ -35,9 +35,9 @@ You could download Git for Windows, or use a Linux virtual machine (I'll explain
 
 **Linux**: `sudo apt install git`
 
-### Basic Git Commands
+## Basic Git Commands
 
-#### Basic Commands
+### Basic Commands
 
 I only used 3-4 commands when working on my website, but these are basic Git commands to get you started with creating your website.
 
@@ -49,7 +49,7 @@ I only used 3-4 commands when working on my website, but these are basic Git com
 - `git branch <branch-name>`: creates a new branch
   - `git checkout <branch-name>`: switch to another branch
 
-#### Pushing Commits
+### Pushing Commits
 
 - `git status`: checks the changes made to the repository
 
@@ -60,30 +60,30 @@ I only used 3-4 commands when working on my website, but these are basic Git com
 - `git push`: pushes the changes in a local repository to a central repository
   - `git push -u origin main`: pushes the commit to the main branch of your repository
 
-### Resources
+## Resources
 
 Here are some extra resources to help you get a better understanding of Git.
 
-#### Websites
+### Websites
 
 - [https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049](https://www.notion.so/Introduction-to-Git-ac396a0697704709a12b6a0e545db049)
 - [https://www.atlassian.com/git/tutorials/what-is-version-control](https://www.atlassian.com/git/tutorials/what-is-version-control)
 
-#### Videos
+## Videos
 
 - [Learn Git in 15 Minutes](https://youtu.be/USjZcfj8yxE)
 - [Git & GitHub Crash Course For Beginners](https://youtu.be/SWYqp7iY_Tc)
 
-#### Cheat Sheets
+### Cheat Sheets
 
 - [https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
 
-## What is Jekyll?
+# What is Jekyll?
 
 Jekyll is a static website generator that makes it easier to create websites without needing any web developer experience. Basically, Jekyll converts your files to what is needed to host your website. All you have to do is create the contents of your website.
 
-### Jekyll Commands
+## Jekyll Commands
 
 `jekyll new .`: makes a new Jekyll site with default content (directory needs to be empty)
 
@@ -93,7 +93,7 @@ Jekyll is a static website generator that makes it easier to create websites wit
 
 - `jekyll serve`: you can just type this after first time to host the local website on port 4000
 
-### Frontmatter
+## Frontmatter
 
 **Frontmatter**: gives information about each page in YAML or JSON format
 
@@ -121,20 +121,20 @@ The link to the default post is `localhost:4000/jekyll/update/2021/3/10/welcome-
 
 - This is the default naming scheme when making the markdown files that will be our blogs. The `YYYY-MM-DD` and dashes in between words are necessary when creating a file. There should be no spaces in your file name.
 
-### Blog Post Syntax
+## Blog Post Syntax
 
 Naming convention: `YYYY-MM-DD-<title-of-post>`
 
 File type: markdown or HTML files
 
-#### Frontmatter
+### Frontmatter
 
 First thing to include on the post is frontmatter
 
 - `layout: post`: defines the template to be a post
 - `tite: <title>`: overrides the default naming convention
 
-#### Organizing Your Blogs
+### Organizing Your Blogs
 
 You don't have to follow the default naming scheme. I suggest you to come up with a way to store your blogs. You can make subdirectories within `_posts` to organize your blog posts. It doesn't change the permalink of the post.
 
@@ -142,7 +142,7 @@ You don't have to follow the default naming scheme. I suggest you to come up wit
   - `_drafts` is located in the home directory, *NOT* in _posts
   - Run `jekyll serve --draft` to show drafts on your website
 
-#### Permalinks
+### Permalinks
 
 Permalinks give permanent links to your blog posts. This is the way I organize my blogs since I don't like unnecessary directories and dates on my link. I came up with several overarching "directories" that categorize my posts.
 
@@ -151,7 +151,7 @@ Permalinks give permanent links to your blog posts. This is the way I organize m
 
 `permalink: <"my-new-url">` sets the permanent link for the post
 
-##### Sample Blog Post
+#### Sample Blog Post
 
 These are 2 ways to format your the address to your blog. You can use categories and the current date, or give the post a permanent link. I recommend sticking with the markdown format when creating your blog posts.
 
@@ -175,7 +175,7 @@ permalink: /directory/you/want
 Begin writing your blog post here...
 ```
 
-### Pages
+## Pages
 
 So far, we've been working with posts. The `layout` category determines what type of page you want on your website. Pages are anything on our website that aren't posts (About, Contact).
 
@@ -183,7 +183,7 @@ So far, we've been working with posts. The `layout` category determines what typ
 - Use `layout: page` to define the page layout
 - If pages are in directories, the address is going to be `localhost:4000/<directory>/<page>`
 
-### Frontmatter Defaults
+## Frontmatter Defaults
 
 You can set frontmatter defaults in the `config.yml` file so it appears automagically when you create a post. `_config.yml` is the file to define the default frontmatter
 
@@ -208,7 +208,7 @@ defaults:
 
 - So without `type`, all files will default to the post layout
 
-### Directory Structure
+## Directory Structure
 
 ```
 <username>.github.io/
@@ -253,11 +253,11 @@ Links to find Jekyll Themes:
 
 There are a lot of Jekyll themes online that you can use to make your website nicer. I'm currently using [Minima](https://github.com/jekyll/minima). I really like the simple UI for my blog. It's also really easy to navigate the directory structure, and create new blog posts using this theme.
 
-### Resources
+## Resources
 
 I learned everything I needed to know about Jekyll from Mike Dane's [tutorial](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB) on YouTube. I also used Jekyll's [documentation](https://jekyllrb.com/docs/).
 
-## Getting Started
+# Getting Started
 
 1. Create a GitHub account
 2. Create a new repository as `<username>.github.io`
@@ -265,13 +265,13 @@ I learned everything I needed to know about Jekyll from Mike Dane's [tutorial](h
 4. Clone the repository to your VM
 5. Start blogging
 
-### Workflow
+## Workflow
 
 > You could download Git for Windows, or use a Linux virtual machine (I'll explain later).
 
 I recommend creating a virtual machine to initially create the site. Jekyll is more compatible with Linux than Windows, so we are going to create a Linux virtual machine to make life easier. This is also a great way to get started with Linux as well! After the initial Jekyll setup, you can stick with this workflow or install Git on Windows and work on your website from your host machine. Here is some [documentation](https://jekyllrb.com/docs/installation/windows/) on how to get Jekyll to work on Windows. I will be going over how to install Jekyll on a Linux VM.
 
-### Installing Git & Jekyll
+## Installing Git & Jekyll
 
 After setting up your VM, the first thing to do is install Git and Jekyll. I followed the installation process for Ubuntu from Jekyll's [documentation](https://jekyllrb.com/docs/installation/ubuntu/).
 
