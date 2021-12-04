@@ -9,8 +9,6 @@ main:
     url: /wiki
   - title: "about"
     url: /about
-  - title: "test"
-    url: /test
 
 wiki-navigation:
   - title: "TMUX"
