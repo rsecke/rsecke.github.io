@@ -242,13 +242,8 @@ Found: mail.mysite.com
 #### windows (windows server 2012 R2)
 - get the latest release here: [https://github.com/PowerShell/Win32-OpenSSH/releases](https://github.com/PowerShell/Win32-OpenSSH/releases)
 - extract the zip file and move it to `C:\Program Files\`
-- open up control panel, navigate to `System and Security`, and click `System`
-```
-> click `Change settings` in the `Computer name, domain, and workgroup settings`
-  > go to the Advanced tab, and select `Enviroment Variables` at the bottom
-> in the second box below, find the `Path` system variable and click `Edit`
-  > add `;C:\Program Files\OpenSSH-Win64` at the end of the variable value
-```
+- open up control panel, navigate to `System and Security` > `System` > `Change settings` under the Computer name, domain, and workgroup settings section
+    - go to the Advanced tab > `Environment Variables` at the bottom > Edit the `Path` system variable on the second box below > add `;C:\Program Files\OpenSSH-Win64` at the end of the variable value
 
 ```
 > cd C:\Program Files\OpenSSH-Win64
