@@ -62,4 +62,6 @@ T&T-navigation:
         url: T&T#nmap
       - title: "gobuster"
         url: T&T#gobuster
+      - title: "ssh"
+        url: T&T#ssh
   - title: "TECHNIQUES"
