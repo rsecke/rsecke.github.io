@@ -381,7 +381,7 @@ Now run the ruby script again, and it should work and create an interactive shel
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [*] Testing: Clean URLs
 [!] Result : Clean URLs disabled (HTTP Response: 404)
-[i] Isn't an issue for Drupal v7.x
+[i] Isn\'t an issue for Drupal v7.x
 --------------------------------------------------------------------------------
 [*] Testing: Code Execution   (Method: name)
 [i] Payload: echo EADOSKML
