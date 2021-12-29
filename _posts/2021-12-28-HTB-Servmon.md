@@ -313,21 +313,20 @@ nadine@SERVMON C:\Temp>echo type C:\Users\Administrator\Desktop\root.txt > root.
 
 Now go back to the GUI to create the script that will run this file to read `root.txt`.
 
-![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%201.png){: .full}
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%201.png)
 
 Don't forget to save your changes by clicking the `Changes` bar on the top right. Once you save the changes, you also have to go to `Control`, which is right next to `Changes` and click `Reload`. More times than not, this will crash the service, which I was not a fan of. I had to reset this box around 8 times trying to figure out how to get it to work.
 
-![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%202.png){: .full}
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%202.png)
 
 After reloading the client, we actually have to go back to that external script and enter in the command we want it to run, otherwise it will not work. Save the changes and reload the client *again* and pray that it does not crash.
 
-![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%203.png){: .full}
-
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%203.png)
 With everything all set up, go to `Queries` and run your external script
 
-![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%204.png){: .full}
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%204.png)
 
-![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%205.png){: .full}
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%205.png)
 
 **\**NOTE:** At first, I tried getting a reverse shell so that I could get a `SYSTEM` shell, but Windows Defender did not let me run `netcat`. I ended up going with my old plan, which was to read the root flag located in `C:\Users\Administrator\Desktop\root.txt`. This box is the worse yet.
 
