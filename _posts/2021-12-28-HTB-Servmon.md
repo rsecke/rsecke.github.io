@@ -1,11 +1,3 @@
----
-layout: single
-title: Servmon (HTB)
-toc: true
-permalink: /htb/servmon
-tags: ["htb"]
----
-
 # nmap
 
 ```sh
@@ -236,6 +228,8 @@ The password was `L1k3B1gBut7s@W0rk`. Let's SSH into the box now.
 
 # system enumeration
 
+With SSH access, let's take another look at `nsclient.ini` to get the password to the web client.
+
 ```
 nadine@SERVMON C:\Program Files\NSClient++>type nsclient.ini                                                          
 # If you want to fill this file with all available options run the following command:                              
@@ -246,7 +240,7 @@ nadine@SERVMON C:\Program Files\NSClient++>type nsclient.ini
 
 ...
 
-; Undocumented key                                                                                                    
+; Undocumented key
 password = ew2x6SsGTxjRwXOT
 
 ...                                                                                                                      
@@ -261,9 +255,15 @@ Current password: ew2x6SsGTxjRwXOT
 
 # exploitation
 
-After 4-5 hours of not understanding why the password did not work when I tried making API calls, I figured out 2 things:
+After 4-5 hours of not understanding why the password did not work when I tried making API calls/visiting the webpage, I figured out 2 things:
 
 - `nsclient.ini` only allowed connections *locally*, which meant I had to tunnel the traffic to Kali's localhost to get it to work.
+
+  ```
+  ; Undocumented key
+  allowed hosts=127.0.0.1
+  ```
+
 - Using Chromium (Google Chrome), instead of Firefox.
 
 Run `ssh -L 8443:127.0.0.1:8443 nadine@10.10.10.184` to set up the SSH tunnel, and supply the password we found earlier. Now we can visit [https://localhost:8443](https://localhost:8443), and enter in the `NSClient++` web password we just found.
@@ -303,23 +303,23 @@ In my SSH session, I set up file called `bruh.bat` in `C:\Temp`
 nadine@SERVMON C:\Temp>echo type C:\Users\Administrator\Desktop\root.txt > root.bat
 ```
 
-Now go back to the GUI to create the script that will run this file to read `root.txt`. 
+Now go back to the GUI to create the script that will run this file to read `root.txt`.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/images/htb/servmon/creating%20an%20external%20script%201.png)
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%201.png){: .full}
 
 Don't forget to save your changes by clicking the `Changes` bar on the top right. Once you save the changes, you also have to go to `Control`, which is right next to `Changes` and click `Reload`. More times than not, this will crash the service, which I was not a fan of. I had to reset this box around 8 times trying to figure out how to get it to work.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/images/htb/servmon/creating%20an%20external%20script%202.png)
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%202.png){: .full}
 
 After reloading the client, we actually have to go back to that external script and enter in the command we want it to run, otherwise it will not work. Save the changes and reload the client *again* and pray that it does not crash.
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/images/htb/servmon/creating%20an%20external%20script%203.png)
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%203.png){: .full}
 
 With everything all set up, go to `Queries` and run your external script
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/images/htb/servmon/creating%20an%20external%20script%204.png)
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%204.png){: .full}
 
-![](https://github.com/rsecke/rsecke.github.io/blob/main/assets/images/htb/servmon/creating%20an%20external%20script%205.png)
+![]({{ site.url }}/assets/images/htb/servmon/creating%20an%20external%20script%205.png){: .full}
 
 **\**NOTE:** At first, I tried getting a reverse shell so that I could get a `SYSTEM` shell, but Windows Defender did not let me run `netcat`. I ended up going with my old plan, which was to read the root flag located in `C:\Users\Administrator\Desktop\root.txt`. This box is the worse yet.
 
