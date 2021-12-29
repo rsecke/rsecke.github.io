@@ -557,7 +557,7 @@ Searching for the hash shows that it is a Drupal7 hash. Let's use `hashcat` to s
 
 `hashcat` cracked the hash, and the password is `booboo`. From out previous enumeration, we know the credentials are `brucetherealadmin:booboo` now.
 
-```
+```sh
 [tyco㉿4YE: ~/htb/armageddon]$ hashcat -m 7900 hash.txt /usr/share/wordlists/rockyou.txt
 
 $S$DgL2gjv6ZtxBo6CdqZEyJuBphBmrCqIV6W97.oOsUf1xAhaadURt:booboo
