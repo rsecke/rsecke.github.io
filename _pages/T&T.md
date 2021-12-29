@@ -232,5 +232,27 @@ Found: mail.mysite.com
 ===============================================================
 ```
 
+## ssh
+
+### installation
+
+#### linux
+`sudo apt install openssh-server`
+
+#### windows (windows server 2012 R2)
+- get the latest release here: [https://github.com/PowerShell/Win32-OpenSSH/releases](https://github.com/PowerShell/Win32-OpenSSH/releases)
+- extract the zip file and move it to `C:\Program Files\`
+- open up control panel, navigate to `System and Security` > `System` > `Change settings` under the Computer name, domain, and workgroup settings section
+    - go to the Advanced tab > `Environment Variables` at the bottom > Edit the `Path` system variable on the second box below > add `;C:\Program Files\OpenSSH-Win64` at the end of the variable value
+
+```
+> cd C:\Program Files\OpenSSH-Win64
+> .\install-sshd.ps1
+> Start-Service sshd,ssh-agent
+  > Set-Service -Name sshd -StartupType "Automatic"
+  > Set-Service -Name ssh-agent -StartupType "Automatic"
+> netsh advfirewall firewall add rule name=SSH dir=in action=allow protocol=TCP localport=22
+```
+
 # Techniques
 
