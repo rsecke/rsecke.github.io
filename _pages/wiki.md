@@ -108,6 +108,14 @@ reset
   > paste $TERM value
 ```
 
+For further shell enhancement:
+```
+ON LOCAL MACHINE: stty -a
+  > copy the row and columns value
+ON REMOTE MACHINE: stty rows <value> columns <value>
+```
+
+This will make your `tty` shell use the entire screen, instead of being cut off.
 # PORT FORWARDING
 ## ssh port forwarding
 
