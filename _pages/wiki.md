@@ -99,13 +99,13 @@ which python
   > ls /usr/bin | grep python
   > apt list --installed | grep python
   > dpkg -l | grep python
-python -c 'import pty; pty.spawn("/bin/bash")'
+python -c 'import pty; pty.spawn("/bin/bash")' OR python3 -c 'import pty; pty.spawn("/bin/bash")'
 
-CTRL + Z to background terminal
-echo $TERM
+CTRL + Z to put terminal in the background
+echo $TERM (copy the value)
 stty raw -echo; fg
 reset
-paste $TERM value
+  > paste $TERM value
 ```
 
 # PORT FORWARDING
