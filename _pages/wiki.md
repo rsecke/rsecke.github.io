@@ -20,7 +20,9 @@ PREFIX + x: delete a pane
 PREFIX + ,: rename a pane
 PREFIX + $: rename a window
 PREFIX + D: detach from tmux session
-  > tmux attach -t 0: get back into tmux
+  > tmux attach -t <pane name>: get back into tmux
+  > tmux new -s <pane name>: create a new tmux session
+  > tmux kill-session <pane name>: kills a tmux session
 PREFIX + %: split pane vertically
 PREFIX + ": split pane horizontally
 PREFIX + Z: makes your current pane full screen during a split screen so you can copy the contents in your terminal
