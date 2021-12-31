@@ -23,6 +23,7 @@ PREFIX + D: detach from tmux session
   > tmux attach -t 0: get back into tmux
 PREFIX + %: split pane vertically
 PREFIX + ": split pane horizontally
+PREFIX + Z: makes your current pane full screen during a split screen so you can copy the contents in your terminal
 ```
 
 ## tmux essentials
