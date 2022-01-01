@@ -48,7 +48,7 @@ wiki-navigation:
       - title: "jVis"
         url: /wiki#jvis
       - title: "Docker"
-        url: /wiki#Docker
+        url: /wiki#docker
   - title: "AUTORECON"
   - title: "METASPLOIT"
     children:
