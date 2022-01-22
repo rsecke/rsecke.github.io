@@ -2,6 +2,7 @@
 layout: single
 title: Nibbles (HTB)
 toc: true
+toc_sticky: true
 permalink: /htb/nibbles
 tags: ["htb"]
 ---

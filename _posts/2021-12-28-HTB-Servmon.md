@@ -2,6 +2,7 @@
 layout: single
 title: Servmon (HTB)
 toc: true
+toc_sticky: true
 permalink: /htb/servmon
 tags: ["htb"]
 ---
