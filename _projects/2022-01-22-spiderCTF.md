@@ -10,5 +10,5 @@ header:
 tags: ["ctf", "web"]
 ---
 
-# spiderCTF
+# using rCTF as the platform
 Test text
