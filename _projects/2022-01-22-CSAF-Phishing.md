@@ -12,7 +12,7 @@ sidebar:
     text: "Project Lead"
   - title: "Objective"
     text: "Demonstate the tactics and development of a phishing operation for CSAF"
-  - title: "Time"
+  - title: "Timeline"
     text: "August 2021 - November 2021"
 tags: ["phishing"]
 ---
