@@ -1,12 +1,17 @@
 ---
 layout: single
-title: "Phishing: A Deep Dive Into the Operation"
+title: "Foo Bar Identity"
+excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
 header:
+  image: /assets/images/projects/phishing.png
   teaser: /assets/images/projects/phishing.png
-excerpt: "Phishing presentation led by SWIFT's Operation Team for Cal Poly Pomona's annual security conference, "Cyber Security Awareness Fair" (CSAF)"
-collection: projects
-permalink: /projects/csaf-phishing
-tags: ["phishing"]
+sidebar:
+  - title: "Role"
+    image: http://placehold.it/350x250
+    image_alt: "logo"
+    text: "Designer, Front-End Developer"
+  - title: "Responsibilities"
+    text: "Reuters try PR stupid commenters should isn't a business model"
 ---
 
 # Phishing
