@@ -1,8 +1,5 @@
 ---
-layout: single
 title: "Phishing: A Deep Dive Into the Operation"
-toc: true
-toc_sticky: true
 header:
   image: 
   teaser: /assets/images/projects/phishing.png
