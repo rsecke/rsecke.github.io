@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Phishing: A Deep Dive Into the Operation"
 header:
   teaser: /assets/images/projects/phishing.png
