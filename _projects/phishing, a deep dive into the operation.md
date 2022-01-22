@@ -3,10 +3,9 @@ layout: single
 title: "Phishing: A Deep Dive Into the Operation"
 toc: true
 toc_sticky: true
-collection: projects
 header:
-  image: /assets/images/porfolio/phishing.png
-  teaser: /assets/images/porfolio/phishing.png
+  image: 
+  teaser: /assets/images/projects/phishing.png
 excerpt: "Phishing presentation led by SWIFT's Operation Team for Cal Poly Pomona's annual security conference, "Cyber Security Awareness Fair" (CSAF)"
 permalink: /projects/csaf-phishing
 tags: ["phishing"]
