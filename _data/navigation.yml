@@ -54,6 +54,10 @@ wiki-navigation:
     children:
       - title: "msfvenom"
         url: /wiki#msfvenom
+  - title: "NETWORKING"
+    children:
+      - title: "settings static IPs"
+        url: /wiki#networking
 
 T&T-navigation:
   - title: "TOOLS"

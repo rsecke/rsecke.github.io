@@ -277,7 +277,7 @@ run post/multi/recon/local_exploit_suggester
 
 ## setting static IPs
 
-**Small note: These methods will disconnect you from your session if you are doing it remotely. I had console access to complete this setup. To make sure this goes off without a hitch, I found a [StackOverflow](https://unix.stackexchange.com/questions/61093/change-remote-host-ip-address-without-losing-control-linux) page on it.
+****Small note**: These methods will disconnect you from your session if you are doing it remotely. I had console access to complete this setup. To make sure this goes off without a hitch, I found a [StackOverflow](https://unix.stackexchange.com/questions/61093/change-remote-host-ip-address-without-losing-control-linux) page on it.
 
 Set the `promote_secondaries` parameter on your ethernet adapter, or globally on all of the interfaces:
 
