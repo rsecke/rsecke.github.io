@@ -272,3 +272,119 @@ set payload <payload>
 
 run post/multi/recon/local_exploit_suggester
 ```
+
+# NETWORKING
+
+## setting static IPs
+
+**Small note: These methods will disconnect you from your session if you are doing it remotely. I had console access to complete this setup. To make sure this goes off without a hitch, I found a [StackOverflow](https://unix.stackexchange.com/questions/61093/change-remote-host-ip-address-without-losing-control-linux) page on it.
+
+Set the `promote_secondaries` parameter on your ethernet adapter, or globally on all of the interfaces:
+
+```
+echo 1 > /proc/sys/net/ipv4/conf/eth0/promote_secondaries 
+OR 
+sysctl net.ipv4.conf.eth0.promote_secondaries=1
+```
+
+### Ubuntu
+
+First copy the file and make a backup just in case
+
+```
+cp /etc/netplan/01-netcfg.yaml /etc/netplan/01-netcfg.yaml.bak
+```
+
+Edit the config file
+
+```yaml
+# This is the network config written by 'subiquity' 
+# ORIGINAL FILE WITH DHCP ENABLED
+network:
+  ethernets:
+    eth0 (or enp0s3):
+      dhcp4: true
+  version: 2
+```
+
+```yaml
+# This is the network config written by 'subiquity'
+# NEW CONFIG FILE WITH STATIC IP SET UP
+network:
+  ethernets:
+    eth0 (or enp0s3):
+      dhcp4: no
+      addresses: [<IP>/<subnet>]
+      gateway4: 192.168.0.1
+      nameservers:
+        addresses: [<DNS server(s)>]
+  version: 2
+```
+
+Restart network service
+
+```sh
+sudo netplan try
+sudo netplan apply
+```
+
+### CentOS
+
+First copy the file and make a backup just in case
+
+```
+cp /etc/sysconfig/network-scripts/ifcfg-<NETWORK-ADAPTER> /etc/sysconfig/network-scripts/ifcfg-<NETWORK-ADAPTER>.bak
+```
+
+Edit the config file
+
+```sh
+# ORIGINAL FILE WITH DHCP ENABLED
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+NAME=eth0
+UUID=be36f738-af9e-4ea7-b93e-f555e6d45cec
+DEVICE=eth0
+ONBOOT=yes
+```
+
+```sh
+# NEW CONFIG FILE WITH STATIC IP SET UP
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+IPADDR=<IP>
+PREFIX=</subnet>
+GATEWAY=<Gateway IP>
+DNS1=<DNS server>
+DNS2=<DNS server>
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+NAME=eth0
+UUID=be36f738-af9e-4ea7-b93e-f555e6d45cec
+DEVICE=eth0
+ONBOOT=yes
+```
+
+Restart network service
+
+```sh
+sudo ifdown <network adapter>
+sudo ifup <network adapter>
+```
+
