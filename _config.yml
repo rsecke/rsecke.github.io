@@ -102,10 +102,10 @@ analytics:
 
 # Site Author
 author:
-  name             : rob
-  avatar           : /assets/images/patsuan.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : Aspiring pentester
-  location         : SWIFT @ Cal Poly Pomona
+  name             : robinson
+  avatar           : /assets/images/smol cat cropped.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : Cybersecurity Operations Analyst Intern @ Anduril
+  location         : TelcoLab/SDC @ Mars
   email            :
   links:
     - label: "LinkedIn"

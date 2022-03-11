@@ -16,7 +16,7 @@ The Center of Cybersecurity Knowledge is an educational institution that aims to
 - Soon to be 1 x [Tech Symposium](https://techsymposium.calpolyswift.org/) speaker (WIP)
 
 ## About Me
-- D1 hooper turned pentester
+- D1 hooper turned aspiring pentester turned blue teamer 😎
 - PowerShell is my favorite programming language
 - Part-time cybersecurity infrastructure god
 - Big fan of Web Apps, Docker, Kubernetes, Python, and Ansible (still learning)
