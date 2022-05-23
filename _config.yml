@@ -280,3 +280,5 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+
+include: ["_pages"] # Allows you to move all pages inside _pages folder
