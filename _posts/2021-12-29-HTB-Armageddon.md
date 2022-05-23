@@ -4,7 +4,8 @@ title: Armageddon (HTB)
 toc: true
 toc_sticky: true
 permalink: /htb/armageddon
-tags: ["htb"]
+tags: ["HTB"]
+categories: ["Writeup"]
 ---
 
 # nmap

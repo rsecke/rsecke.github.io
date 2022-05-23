@@ -4,7 +4,8 @@ title: Setting Up Your Own Website Using Github Pages
 toc: true
 toc_sticky: true
 permalink: /technology/github-pages
-tags: ["technology", "github pages", "github"]
+tags: ["GitHub"]
+categories: ["Technology"]
 ---
 
 # What is GitHub Pages?
